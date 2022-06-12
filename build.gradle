@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+}
+
+group 'ru.sbermegamarket'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+dependencies {
+    testImplementation ('org.junit.jupiter:junit-jupiter:5.8.2',
+            'com.google.guava:guava:31.1-jre',
+            "org.slf4j:slf4j-simple:1.7.36",
+            'com.codeborne:selenide:6.6.2')
+}
+
+test {
+    useJUnitPlatform()
+}
