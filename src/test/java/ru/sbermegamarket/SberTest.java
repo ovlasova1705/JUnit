@@ -1,7 +1,6 @@
 package ru.sbermegamarket;
 
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
@@ -31,7 +30,6 @@ public class SberTest {
     @Test
     void firstTest() {
         Selenide.open("https://sbermegamarket.ru/");
-        //$("[data-widget='searchBarDesktop']").shouldHave(text(""));
         $("input[placeholder='Искать товары']").shouldBe(empty);
     }
 
@@ -57,7 +55,7 @@ public class SberTest {
 
     }
 
-    @CsvFileSource(resources = {"/test_data/sber.csv"})
+    @CsvFileSource(resources = {"/testData/sber.csv"})
     @ParameterizedTest(name = "При поиске {0} на cтранице есть {1}")
     void csvFileSourceParametrizedTest(String testData, String expectedResult) {
         Selenide.open("https://sbermegamarket.ru/");
