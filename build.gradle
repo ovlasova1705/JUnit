@@ -1,8 +1,8 @@
 plugins {
-    id 'java-library'
+    id 'java'
 }
 
-group 'ru.sbermegamarket'
+group 'com.jetbrains'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -15,10 +15,10 @@ compileTestJava {
     options.encoding = 'UTF-8'
 }
 dependencies {
-    testImplementation ('org.junit.jupiter:junit-jupiter:5.8.2',
-            'com.google.guava:guava:31.1-jre',
-            "org.slf4j:slf4j-simple:1.7.36",
-            'com.codeborne:selenide:6.6.2')
+    testImplementation('org.junit.jupiter:junit-jupiter:5.9.2',
+            "org.slf4j:slf4j-simple:2.0.6",
+            'com.codeborne:selenide:6.15.0'
+    )
 }
 
 test {
