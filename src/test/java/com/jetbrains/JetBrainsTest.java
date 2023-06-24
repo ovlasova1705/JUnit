@@ -1,6 +1,6 @@
 package com.jetbrains;
 
-import com.codeborne.selenide.CollectionCondition;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;

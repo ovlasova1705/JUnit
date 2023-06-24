@@ -1,6 +1,6 @@
 package com.jetbrains;
 
-public enum EnumLang {
+public enum EnumLang  {
     English, Deutsch, Español;
     }
 
